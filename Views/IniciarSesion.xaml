@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AuroraApp_MAUI.Views.IniciarSesion"
+             Title="Iniciar Sesion">
+    <ScrollView>
+        <VerticalStackLayout Spacing="5">
+            <Label 
+             Text="INICIAR SESION"
+             FontSize="32"
+             VerticalOptions="Center" 
+             HorizontalOptions="Center" />
+            <Label 
+             Text="Usuario:"
+             FontSize="18"
+             VerticalOptions="Start" 
+             HorizontalOptions="Start" />
+            
+            <Entry Placeholder="Ingrese su usuario" x:Name="Usuario"/>
+            
+            <Label 
+             Text="Contraseña:"
+             FontSize="18"
+             VerticalOptions="Start" 
+             HorizontalOptions="Start" />
+            <Entry Placeholder="Ingrese su contraseña" x:Name="Contraseña"/>
+
+            <Button
+             x:Name="Ingresar"
+             Text="Ingresar"
+             Clicked="Ingresar_Clicked"
+             HorizontalOptions="Center" />
+
+            <Button
+             x:Name="Regresar"
+             Text="Regresar"
+             Clicked="Regresar_Clicked"
+             HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>   
+</ContentPage>

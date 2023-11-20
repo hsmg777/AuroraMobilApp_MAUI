@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AuroraApp_MAUI.Views.MenuPrincipal"
+             Title="Menu Principal">
+    <ScrollView>
+        <VerticalStackLayout Spacing="5">
+            <Label 
+                Text="Bienvenidos a Aurora"
+                FontSize="32"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Label
+                Text="Inicia sesion para acceder a las reservas"
+                FontSize="14"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="IniciarSesion"
+                Text="Iniciar Sesion"
+                SemanticProperties.Hint="Iniciar Sesion con Usuario"
+                Clicked="IniciarSesion_Clicked"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="Registrarse"
+                Text="Registrarse"
+                SemanticProperties.Hint="Registrar un nuevo Usuario"
+                Clicked="Registrarse_Clicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
