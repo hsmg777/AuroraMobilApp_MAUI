@@ -5,11 +5,39 @@
              Title="Registrarse">
     <ScrollView>
         <VerticalStackLayout>
-        <Label 
+            <Label 
             Text="Registrarse"
             FontSize="32"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+            <Label 
+            Text="Nombre:"
+            FontSize="18"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
+            <Entry Placeholder="Ingrese su nombre" x:Name="lblNombre"/>
+            
+            <Label
+                Text="Apellido:"
+                FontSize="18"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"/>
+            <Entry Placeholder="Ingrese su apellido" x:Name="lblApellido"/>
+
+            <Label
+                Text="Usuario:"
+                FontSize="18"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"/>
+            <Entry Placeholder="Ingrese un nombre nuevo de usuario" x:Name="lblUsuario"/>
+
+            <Label
+                Text="Ingrese una nueva contraseña:"
+                FontSize="18"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"/>
+            <Entry Placeholder="Contraseña" x:Name="lblContraseña"/>
+
             <Button
             x:Name="Regresar"
             Text="Regresar"
