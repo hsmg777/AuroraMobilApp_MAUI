@@ -9,7 +9,7 @@ public partial class IniciarSesion : ContentPage
 	private void Regresar_Clicked(object sender, EventArgs e) {
 		Shell.Current.GoToAsync("..");
 	}
-	private void Ingresar_Clicked(object sender, EventArgs e) { 
-		
+	private void Ingresar_Clicked(object sender, EventArgs e) {
+		Shell.Current.GoToAsync(nameof(MenuPrinc));
 	}
 }
