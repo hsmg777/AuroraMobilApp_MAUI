@@ -10,4 +10,9 @@ public partial class ReservaPage : ContentPage
     {
         Shell.Current.GoToAsync("..");
     }
+  
+    private void Reserva_clicked(object sender, EventArgs e)
+    {
+        DisplayAlert("AURORA RESERVAS", "Tu reserva se ha realizado con exito", "Aceptar");
+    }
 }

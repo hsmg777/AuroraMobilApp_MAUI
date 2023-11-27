@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AuroraApp_MAUI.Views.IniciarSesion"
              Title="Iniciar Sesion">
-    <ScrollView>
+    <ScrollView BackgroundColor="Beige">
         <VerticalStackLayout Spacing="5">
             <Label 
              Text="INICIAR SESION"
