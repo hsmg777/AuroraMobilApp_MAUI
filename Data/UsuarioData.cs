@@ -1,5 +1,4 @@
 ﻿using AuroraApp_MAUI.Models;
-using Intents;
 using SQLite;
 using System;
 using System.Collections.Generic;
