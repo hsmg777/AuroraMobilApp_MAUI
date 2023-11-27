@@ -6,4 +6,8 @@ public partial class ReservaPage : ContentPage
 	{
 		InitializeComponent();
 	}
+    private void Regresar_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync("..");
+    }
 }

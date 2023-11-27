@@ -45,6 +45,8 @@
                        Grid.Column="0"/>
                 <Button 
                         Text="RESERVAR"
+                        x:Name="Reservar"
+                        Clicked="Reservar_Clicked"
                         Grid.Row="2"
                         Grid.Column="0"
                         HorizontalOptions="Center"/>

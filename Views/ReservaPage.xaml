@@ -3,10 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AuroraApp_MAUI.Views.ReservaPage"
              Title="ReservaPage">
-    <VerticalStackLayout>
+    <VerticalStackLayout HorizontalOptions="Center" >
         <Label 
             Text="RESERVA:"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Label 
+            Text="Nombre: "
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
+        <Entry
+            Text="A nombre de quien va la reserva"
+            TextColor="Gray"/>
+        <Label 
+            Text="Fecha: "
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
+        <Entry
+            Text="Fecha de la reserva"
+            TextColor="Gray"/>
+        <Label 
+            Text="Hora de llegada"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
+        <Entry
+            Text="Hora de llegada"
+            TextColor="Gray"/>
+        <Button
+Text="Reservar"
+HorizontalOptions="Center"
+            BackgroundColor="Red"/>
+        <Button
+ x:Name="Regresar"
+ Text="Regresar"
+ Clicked="Regresar_Clicked"
+ HorizontalOptions="Center" />
+        
+
+
+
+
     </VerticalStackLayout>
 </ContentPage>

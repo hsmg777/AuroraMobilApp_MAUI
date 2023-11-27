@@ -10,4 +10,8 @@ public partial class MenuPrinc : ContentPage
     {
         Shell.Current.GoToAsync("..");
     }
+    private void Reservar_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync(nameof(ReservaPage));
+    }
 }
