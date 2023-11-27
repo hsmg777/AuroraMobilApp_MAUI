@@ -18,7 +18,7 @@
             <Grid BackgroundColor="Gray">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30" />
-                    <RowDefinition Height="120" />
+                    <RowDefinition Height="200" />
                     <RowDefinition Height="50" />
                     
                 </Grid.RowDefinitions>
@@ -38,11 +38,11 @@
                      Grid.Row="0"
                         Grid.Column="0"
                     />
-                <Image Source="https://img.freepik.com/foto-gratis/amigos-tintinean-vasos-bebida-bar-moderno_1150-18971.jpg"
+                <Image Source="https://marketplace.canva.com/EAE-B_Jts5g/1/0/1131w/canva-flyers-fiesta-nocturna-llamativo-fucsia-rseTRWTp8HQ.jpg"
                     VerticalOptions="Center" 
                     HorizontalOptions="Center"
-                       Grid.Row="1"
-                       Grid.Column="0"/>
+                    Grid.Row="1"
+                    Grid.Column="0"/>
                 <Button 
                         Text="RESERVAR"
                         x:Name="Reservar"
@@ -61,7 +61,7 @@
                  Grid.Row="0"
                   Grid.Column="1"
                 />
-                <Image Source="https://img.freepik.com/foto-gratis/amigos-tintinean-vasos-bebida-bar-moderno_1150-18971.jpg"
+                <Image Source="https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200232/71501661-dise%C3%B1o-de-flyer-de-fiesta-disco-banner-de-baile-para-club-de-m%C3%BAsica-plantilla-de-discoteca-vida.jpg"
                 VerticalOptions="Fill" 
                 HorizontalOptions="Fill"
                    Grid.Row="1"
@@ -81,7 +81,7 @@
              Grid.Row="0"
                 Grid.Column="2"
             />
-                <Image Source="https://img.freepik.com/foto-gratis/amigos-tintinean-vasos-bebida-bar-moderno_1150-18971.jpg"
+                <Image Source="https://i.pinimg.com/originals/e5/a6/43/e5a643a20d811a0f2d449eaa47052a19.jpg"
                 VerticalOptions="Fill" 
                 HorizontalOptions="Fill"
                    Grid.Row="1"
