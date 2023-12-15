@@ -6,34 +6,69 @@
     <VerticalStackLayout  BackgroundColor="Black">
         <Label 
             Text="RESERVA:"
+            TextColor="White"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <Label 
             Text="Nombre: "
+            TextColor="White"
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
-        <Entry
-            x:Name="entrynombre"
-            Text="A nombre de quien va la reserva"
-            TextColor="Gray"/>
+        <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
+            <Entry
+                Text="{}"
+                x:Name="entrynombre"
+                Placeholder="A nombre de quien va la reserva"
+                PlaceholderColor="Gray"/>
+        </Frame>
+        <Label 
+            Text="Telefono:"
+            TextColor="White"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
+        <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
+            <Entry
+            x:Name="entryTelefono"
+            Keyboard="Telephone"
+            Placeholder="ingrese un numero de contacto"
+            PlaceholderColor="Gray"/>
+        </Frame>
+        
+        <Label 
+        Text="Numero de personas: "
+        TextColor="White"
+        VerticalOptions="Start" 
+        HorizontalOptions="Start" />
+        <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
+            <Entry
+            x:Name="numPersonas"
+            Placeholder="Cantidad de personas que asistiran"
+            PlaceholderColor="Gray"/>
+        </Frame>
+
+
         <Label 
             Text="Fecha: "
+            TextColor="White"
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
-        <Entry
-            x:Name="entryfecha"
-            Text="Fecha de la reserva"
-            TextColor="Gray"/>
+        <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
+            <DatePicker TextColor="Gray" x:Name="entryFecha" />
+            
+        </Frame>
+        
         <Label 
             Text="Hora de llegada"
+            TextColor="White"
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
-        <Entry
-            x:Name="entryhora"
-            Text="Hora de llegada"
-            TextColor="Gray"/>
+        <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
+            <TimePicker TextColor="Gray" x:Name="entryhora"/>
+        </Frame>
+       
         <Button
             Text="Reservar"
+            TextColor="Black"
             x:Name="Reserva"
             Clicked="BtnReservar_Clicked"
             HorizontalOptions="Center"
@@ -43,6 +78,8 @@
         
         <Button
          x:Name="Regresar"
+         BackgroundColor="White"
+         TextColor="Black"
          Text="Regresar"
          Clicked="Regresar_Clicked"
          HorizontalOptions="Center" />

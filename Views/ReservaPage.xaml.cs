@@ -1,3 +1,4 @@
+using AuroraApp_MAUI.ViewModels;
 using Microsoft.Maui.Controls;
 using System;
 using System.Threading.Tasks;
@@ -9,16 +10,18 @@ namespace AuroraApp_MAUI.Views
         public ReservaPage()
         {
             InitializeComponent();
+            BindingContext = new ReservaPageViewModel();
         }
 
         private async void BtnReservar_Clicked(object sender, EventArgs e)
         {
             // Verificar si los campos de entrada están vacíos
             if (string.IsNullOrWhiteSpace(entrynombre.Text) ||
-                string.IsNullOrWhiteSpace(entryfecha.Text) ||
-                string.IsNullOrWhiteSpace(entryhora.Text))
+                entryFecha == null ||
+                entryhora == null ||
+                string.IsNullOrWhiteSpace(numPersonas.Text))
             {
-                // Mostrar mensaje de error si algún campo está vacío
+                
                 await DisplayAlert("Error", "Por favor, completa todos los campos antes de reservar.", "OK");
                 return;
             }
