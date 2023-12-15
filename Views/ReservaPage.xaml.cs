@@ -13,23 +13,27 @@ namespace AuroraApp_MAUI.Views
 
         private async void BtnReservar_Clicked(object sender, EventArgs e)
         {
-            // Mostramos un indicador de carga durante la reserva
+            // Verificar si los campos de entrada están vacíos
+            if (string.IsNullOrWhiteSpace(entrynombre.Text) ||
+                string.IsNullOrWhiteSpace(entryfecha.Text) ||
+                string.IsNullOrWhiteSpace(entryhora.Text))
+            {
+                // Mostrar mensaje de error si algún campo está vacío
+                await DisplayAlert("Error", "Por favor, completa todos los campos antes de reservar.", "OK");
+                return;
+            }
             activityIndicator.IsRunning = true;
 
-            // Llamamos al método asíncrono para simular el proceso de reserva
             bool resultadoReserva = await RealizarReservaAsync();
-
-            // Ocultamos el indicador de carga después de la reserva
             activityIndicator.IsRunning = false;
 
             if (resultadoReserva)
             {
-                // Reserva exitosa, muestra un mensaje personalizado
+                // Reserva exitosa, muestra un mensaje PERSONALIZADO
                 await DisplayAlert("¡Enhorabuena!", "Tu reserva ha sido confirmada con éxito. ¡Esperamos verte pronto!", "OK");
             }
             else
             {
-                // Muestra un mensaje de error
                 await DisplayAlert("Error", "Lo sentimos, la reserva no se pudo completar en este momento. Por favor, inténtalo nuevamente.", "OK");
             }
         }
@@ -42,6 +46,7 @@ namespace AuroraApp_MAUI.Views
 
             return reservaExitosa;
         }
+
         private void Regresar_Clicked(object sender, EventArgs e)
         {
             Shell.Current.GoToAsync("..");
@@ -54,6 +59,7 @@ namespace AuroraApp_MAUI.Views
         }
     }
 }
+
 
 
 

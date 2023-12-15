@@ -13,6 +13,7 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Entry
+            x:Name="entrynombre"
             Text="A nombre de quien va la reserva"
             TextColor="Gray"/>
         <Label 
@@ -20,6 +21,7 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Entry
+            x:Name="entryfecha"
             Text="Fecha de la reserva"
             TextColor="Gray"/>
         <Label 
@@ -27,22 +29,23 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Entry
+            x:Name="entryhora"
             Text="Hora de llegada"
             TextColor="Gray"/>
         <Button
-Text="Reservar"
-x:Name="Reserva"
-Clicked="BtnReservar_Clicked"
-HorizontalOptions="Center"
+            Text="Reservar"
+            x:Name="Reserva"
+            Clicked="BtnReservar_Clicked"
+            HorizontalOptions="Center"
             BackgroundColor="White"/>
         
         <ActivityIndicator x:Name="activityIndicator" IsRunning="False" Color="Blue" />
         
         <Button
- x:Name="Regresar"
- Text="Regresar"
- Clicked="Regresar_Clicked"
- HorizontalOptions="Center" />
+         x:Name="Regresar"
+         Text="Regresar"
+         Clicked="Regresar_Clicked"
+         HorizontalOptions="Center" />
         
 
 
