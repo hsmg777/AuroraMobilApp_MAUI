@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AuroraApp_MAUI.Views.Registrarse"
              Title="Registrarse">
-    <ScrollView BackgroundColor="Beige">
+    <ScrollView BackgroundColor="Black">
         <VerticalStackLayout>
             <Label 
             Text="Registrarse"

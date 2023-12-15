@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AuroraApp_MAUI.Views.ReservaPage"
              Title="ReservaPage">
-    <VerticalStackLayout  BackgroundColor="Beige">
+    <VerticalStackLayout  BackgroundColor="Black">
         <Label 
             Text="RESERVA:"
             VerticalOptions="Center" 
@@ -32,9 +32,12 @@
         <Button
 Text="Reservar"
 x:Name="Reserva"
-Clicked="Reserva_clicked"
+Clicked="BtnReservar_Clicked"
 HorizontalOptions="Center"
-            BackgroundColor="Red"/>
+            BackgroundColor="White"/>
+        
+        <ActivityIndicator x:Name="activityIndicator" IsRunning="False" Color="Blue" />
+        
         <Button
  x:Name="Regresar"
  Text="Regresar"

@@ -1,15 +1,51 @@
-namespace AuroraApp_MAUI.Views;
+using AuroraApp_MAUI.Views;
+using Microsoft.Maui.Controls;
+using System;
+using System.Threading.Tasks;
 
-public partial class IniciarSesion : ContentPage
+
+namespace AuroraApp_MAUI.Views
 {
-	public IniciarSesion()
-	{
-		InitializeComponent();
-	}
-	private void Regresar_Clicked(object sender, EventArgs e) {
-		Shell.Current.GoToAsync("..");
-	}
-	private void Ingresar_Clicked(object sender, EventArgs e) {
-		Shell.Current.GoToAsync(nameof(MenuPrinc));
-	}
+    public partial class IniciarSesion : ContentPage
+    {
+        public IniciarSesion()
+        {
+            InitializeComponent();
+        }
+
+        private async void BtnIniciarSesion_Clicked(object sender, EventArgs e)
+        {
+            // Mostramos un indicador de carga durante el inicio de sesión
+            activityIndicator.IsRunning = true;
+
+            bool resultadoInicioSesion = await RealizarInicioSesionAsync();
+
+            // Ocultamos el indicador de carga después del inicio de sesión
+            activityIndicator.IsRunning = false;
+
+            if (resultadoInicioSesion)
+            {
+                await Shell.Current.GoToAsync(nameof(MenuPrinc));
+            }
+            else
+            {
+                await DisplayAlert("Error", "Inicio de sesión fallido", "OK");
+            }
+        }
+
+        private async Task<bool> RealizarInicioSesionAsync()
+        {
+            await Task.Delay(3000);
+            return true;
+        }
+
+        private async void Regresar_Clicked(object sender, EventArgs e)
+        {
+            // Mostramos un indicador de carga durante el regreso
+            activityIndicator.IsRunning = true;
+            await Shell.Current.GoToAsync("..");
+            activityIndicator.IsRunning = false;
+        }
+    }
 }
+

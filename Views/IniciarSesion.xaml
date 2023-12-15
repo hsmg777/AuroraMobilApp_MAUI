@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AuroraApp_MAUI.Views.IniciarSesion"
              Title="Iniciar Sesion">
-    <ScrollView BackgroundColor="Beige">
+    <ScrollView BackgroundColor="Black">
         <VerticalStackLayout Spacing="5">
             <Label 
              Text="INICIAR SESION"
@@ -28,7 +28,7 @@
             <Button
              x:Name="Ingresar"
              Text="Ingresar"
-             Clicked="Ingresar_Clicked"
+             Clicked="BtnIniciarSesion_Clicked"
              HorizontalOptions="Center" />
 
             <Button
@@ -36,6 +36,13 @@
              Text="Regresar"
              Clicked="Regresar_Clicked"
              HorizontalOptions="Center" />
+
+            <ActivityIndicator x:Name="activityIndicator" IsRunning="False" Color="Green" />
+
+
+
+
+
 
         </VerticalStackLayout>
     </ScrollView>   
