@@ -48,7 +48,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiImage Remove="Resources\Images\AuroraLogo.png" />
+	  <None Remove="Resources\Images\aurora.png" />
+	  <None Remove="Resources\Images\aurorawthbg.png" />
 	</ItemGroup>
 
 	<ItemGroup>

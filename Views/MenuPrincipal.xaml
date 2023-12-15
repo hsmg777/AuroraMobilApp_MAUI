@@ -4,13 +4,19 @@
              x:Class="AuroraApp_MAUI.Views.MenuPrincipal"
              Title="AURORA RESERVAS">
     <ScrollView BackgroundColor="Black">
-        <VerticalStackLayout Spacing="5" VerticalOptions="Center">
+        <VerticalStackLayout Spacing="1" VerticalOptions="Center">
             <Label 
                 Text="Bienvenidos a Aurora"
                 FontSize="32"
                 TextColor="White"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
+
+            <Image Source="aurorawthbg.png"
+                   HeightRequest="250" WidthRequest="250" 
+                   Aspect="AspectFit" />
+
+
             <Label
                 Text="Inicia sesion para acceder a las reservas"
                 FontSize="14"
