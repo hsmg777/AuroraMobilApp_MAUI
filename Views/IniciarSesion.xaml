@@ -4,29 +4,49 @@
              x:Class="AuroraApp_MAUI.Views.IniciarSesion"
              Title="Iniciar Sesion">
     <ScrollView BackgroundColor="Black">
-        <VerticalStackLayout Spacing="5">
+        <VerticalStackLayout Spacing="10">
             <Label 
              Text="INICIAR SESION"
-             FontSize="32"
+             TextColor="White"
+             FontSize="Header"
              VerticalOptions="Center" 
              HorizontalOptions="Center" />
             <Label 
              Text="Usuario:"
-             FontSize="18"
+             TextColor="White"
+             FontSize="Medium"
              VerticalOptions="Start" 
              HorizontalOptions="Start" />
-            
-            <Entry Placeholder="Ingrese su usuario" x:Name="Usuario"/>
+            <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
+                <Entry 
+                    Placeholder="Ingrese su usuario" 
+                    TextColor="Gray" 
+                    x:Name="Usuario"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    />      
+            </Frame>
+
             
             <Label 
              Text="Contraseña:"
-             FontSize="18"
+             TextColor="White"
+             FontSize="Medium"
              VerticalOptions="Start" 
              HorizontalOptions="Start" />
-            <Entry Placeholder="Ingrese su contraseña" x:Name="Contraseña"/>
+            
+            <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
+                <Entry TextColor="gray" Placeholder="Ingrese su contraseña" x:Name="Contraseña"
+                       VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                                      />
+            </Frame>
+            
 
             <Button
              x:Name="Ingresar"
+             BackgroundColor="White"
+             TextColor="Black"
              Text="Ingresar"
              Clicked="BtnIniciarSesion_Clicked"
              HorizontalOptions="Center" />
@@ -34,10 +54,12 @@
             <Button
              x:Name="Regresar"
              Text="Regresar"
+             BackgroundColor="White"
+             TextColor="Black"
              Clicked="Regresar_Clicked"
              HorizontalOptions="Center" />
 
-            <ActivityIndicator x:Name="activityIndicator" IsRunning="False" Color="Green" />
+            <ActivityIndicator x:Name="activityIndicator" IsRunning="False" Color="White" />
 
 
 
