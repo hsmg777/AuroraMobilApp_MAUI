@@ -36,7 +36,7 @@
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\AuroraLogo" Color="D6D6D6" BaseSize="128,128" />
-		<ma
+		
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
