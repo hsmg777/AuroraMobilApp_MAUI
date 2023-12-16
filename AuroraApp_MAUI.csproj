@@ -71,6 +71,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
 	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 	</ItemGroup>
 

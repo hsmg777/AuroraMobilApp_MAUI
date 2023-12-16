@@ -16,8 +16,8 @@
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
             <Entry
-                Text=""
-                TextColor="White"
+                Text="{Binding Reservacs.nombre}"
+                TextColor="Gray"
                 x:Name="entrynombre"
                 Placeholder="A nombre de quien va la reserva"
                 PlaceholderColor="Gray"/>
@@ -29,7 +29,8 @@
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
             <Entry
-            TextColor="White"
+            TextColor="Gray"
+            Text="{Binding Reservacs.telefono}"
             x:Name="entryTelefono"
             Keyboard="Telephone"
             Placeholder="ingrese un numero de contacto"
@@ -43,7 +44,8 @@
         HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
             <Entry
-            TextColor="White"
+            TextColor="Gray"
+            Text="{Binding Reservacs.numPersonas}"
             x:Name="numPersonas"
             Placeholder="Cantidad de personas que asistiran"
             PlaceholderColor="Gray"/>
@@ -56,7 +58,7 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <DatePicker TextColor="Gray" x:Name="entryFecha" />
+            <DatePicker TextColor="Gray" x:Name="entryFecha"  Date="{Binding Reservacs.fecha}"/>
             
         </Frame>
         
@@ -66,7 +68,7 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <TimePicker TextColor="Gray" x:Name="entryhora"/>
+            <TimePicker TextColor="Gray" x:Name="entryhora" Time="{Binding Reservacs.horaLlegada}"/>
         </Frame>
        
         <Button
