@@ -13,9 +13,9 @@ namespace AuroraApp_MAUI.ViewModels
         public Reservacs Reservacs { get; set; }
         public ReservaPageViewModel() {
             Reservacs = new Reservacs();
-            Reservacs.nombre = "Nombres y Apellidos";
-            Reservacs.telefono = "099123456";
-            Reservacs.numPersonas = "0";
+            Reservacs.nombre = "Nombres y Apellidos*";
+            Reservacs.telefono = "099123456*";
+            Reservacs.numPersonas = "0*";
             Reservacs.fecha = null;
             Reservacs.horaLlegada = null;
 
