@@ -21,6 +21,14 @@ namespace AuroraApp_MAUI.ViewModels
 
 
         }
+        public void ResetValues()
+        {
+            Reservacs.nombre = null;
+            Reservacs.telefono = null;
+            Reservacs.numPersonas = null;
+            Reservacs.fecha = null;
+            Reservacs.horaLlegada = null;
+        }
 
     }
 }

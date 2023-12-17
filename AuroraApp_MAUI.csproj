@@ -62,6 +62,9 @@
 	  <MauiXaml Update="Views\MenuPrincipal.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\mostrarReservas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Registrarse.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

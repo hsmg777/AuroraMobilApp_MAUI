@@ -1,3 +1,4 @@
+using AuroraApp_MAUI.Models;
 using AuroraApp_MAUI.ViewModels;
 using Microsoft.Maui.Controls;
 using System;
@@ -7,14 +8,20 @@ namespace AuroraApp_MAUI.Views
 {
     public partial class ReservaPage : ContentPage
     {
+        
         public ReservaPage()
         {
+
             InitializeComponent();
             BindingContext = new ReservaPageViewModel();
+            
         }
+
 
         private async void BtnReservar_Clicked(object sender, EventArgs e)
         {
+            
+
             // Verificar si los campos de entrada están vacíos
             if (string.IsNullOrWhiteSpace(entrynombre.Text) ||
                 entryFecha == null ||
@@ -32,11 +39,16 @@ namespace AuroraApp_MAUI.Views
 
             if (resultadoReserva)
             {
-                entrynombre.Text = null;
-                entryTelefono.Text = null;
-                numPersonas.Text = null;
-                entryFecha = null;
-                entryhora = null;
+                // Reserva exitosa, agrega la reserva a la lista
+                (Application.Current.MainPage as Shell)?.CurrentItem?.Route
+                    .FirstOrDefault()?.GetContentPage()?.BindingContext
+                    .GetPropertyValue<mostrarReservaViewModel>("BindingContext")?
+                    .ReservationList.Reservations.Add((BindingContext as ReservaPageViewModel)?.Reservacs);
+                // Restablecer valores después de la reserva exitosa
+                (BindingContext as ReservaPageViewModel)?.ResetValues();
+                
+                
+
                 // Reserva exitosa, muestra un mensaje PERSONALIZADO
                 await DisplayAlert("¡Enhorabuena!", "Tu reserva ha sido confirmada con éxito. ¡Esperamos verte pronto!", "OK");
             }
@@ -66,6 +78,7 @@ namespace AuroraApp_MAUI.Views
             Random random = new Random();
             return random.NextDouble() < 0.8;
         }
+        
     }
 }
 
