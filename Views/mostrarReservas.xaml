@@ -3,22 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AuroraApp_MAUI.Views.MostrarReservas">
 
-    <StackLayout>
+    <StackLayout BackgroundColor="Black">
+        <Label Text="Reservas Realizadas:" TextColor="White" FontSize="Large"
+               />
         <ListView ItemsSource="{Binding ReservationList.Reservations}" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout>
-                            <Label Text="{Binding nombre}" FontAttributes="Bold"/>
-                            <Label Text="{Binding numPersonas}" />
-                            <Label Text="{Binding telefono}" />
-                            <Label Text="{Binding fecha, StringFormat='{0:d}'}" />
-                            <Label Text="{Binding horaLlegada, StringFormat='{0:hh\\:mm\\:ss tt}'}" />
+                        <StackLayout HorizontalOptions="Center">
+                            <Label Text="{Binding nombre}" FontAttributes="Bold" TextColor="White"/>
+                            <Label Text="{Binding numPersonas}" TextColor="White" />
+                            <Label Text="{Binding telefono}" TextColor="White" />
+                            <Label Text="{Binding fecha, StringFormat='{0:d}'}" TextColor="White" />
+                            <Label Text="{Binding horaLlegada, StringFormat='{0:hh\\:mm\\:ss tt}'}" TextColor="White" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button
+  x:Name="Regresar"
+  Text="Regresar"
+  BackgroundColor="White"
+  TextColor="Black"
+  Clicked="Regresar_Clicked"
+  HorizontalOptions="Center" />
     </StackLayout>
 
 </ContentPage>

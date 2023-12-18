@@ -16,10 +16,10 @@
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
             <Entry
-                Text="{Binding Reservas.nombre}"
+                
                 TextColor="Gray"
                 x:Name="entrynombre"
-                Placeholder="A nombre de quien va la reserva"
+                Placeholder="{Binding Reservas.nombre}"
                 PlaceholderColor="Gray"/>
         </Frame>
         <Label 
@@ -30,10 +30,9 @@
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
             <Entry
             TextColor="Gray"
-            Text="{Binding Reservas.telefono}"
             x:Name="entryTelefono"
             Keyboard="Telephone"
-            Placeholder="ingrese un numero de contacto"
+            Placeholder="{Binding Reservas.telefono}"
             PlaceholderColor="Gray"/>
         </Frame>
 
@@ -45,9 +44,8 @@
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
             <Entry
             TextColor="Gray"
-            Text="{Binding Reservas.numPersonas}"
             x:Name="numPersonas"
-            Placeholder="Cantidad de personas que asistiran"
+            Placeholder="{Binding Reservas.numPersonas}"
             PlaceholderColor="Gray"/>
         </Frame>
 
