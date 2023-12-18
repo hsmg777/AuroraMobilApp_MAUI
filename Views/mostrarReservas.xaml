@@ -1,35 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AuroraApp_MAUI.Views.mostrarReservas"
-             BackgroundColor="Black"
-             >
-    <VerticalStackLayout BackgroundColor="Black">
-        <Label
-            Text="RESERVAS"
-            TextColor="White"
-            FontSize="Header"/>
-        <Label
-            Text="Aqui se mostraran tus reservas realizadas:"
-            TextColor="White"
-            FontSize="Medium"
-            />
-        <ListView ItemsSource="{Binding ReservationList.Reservations}">
+             x:Class="AuroraApp_MAUI.Views.MostrarReservas">
+
+    <StackLayout>
+        <ListView ItemsSource="{Binding ReservationList.Reservations}" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="10">
-                            <Label Text="{Binding nombre}" FontAttributes="Bold" />
+                        <StackLayout>
+                            <Label Text="{Binding nombre}" FontAttributes="Bold"/>
+                            <Label Text="{Binding numPersonas}" />
                             <Label Text="{Binding telefono}" />
-                            <Label Text="{Binding numPersonas, StringFormat='Número de asistentes: {0}'}" />
-                            <Label Text="{Binding fecha, StringFormat='Fecha: {0:d}'}" />
-                            <Label Text="{Binding horaLlegada, StringFormat='Hora de llegada: {0:t}'}" />
-                            <!-- Puedes agregar más controles aquí para mostrar otros detalles de la reserva -->
+                            <Label Text="{Binding fecha, StringFormat='{0:d}'}" />
+                            <Label Text="{Binding horaLlegada, StringFormat='{0:hh\\:mm\\:ss tt}'}" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
-    </VerticalStackLayout>
+    </StackLayout>
+
 </ContentPage>

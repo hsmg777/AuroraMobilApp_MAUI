@@ -3,35 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AuroraApp_MAUI.Views.MenuPrinc">
     <ScrollView BackgroundColor="Black" >
-    <VerticalStackLayout Padding="10" Spacing="10">
-        <Label 
+        <VerticalStackLayout Padding="10" Spacing="10">
+            <Label 
             Text="MENU PRINCIPAL"
             FontSize="Header"
             TextColor="White"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Label 
+            <Label 
             Text="Reserve la fiesta que desee:"
             TextColor="White"
             FontSize="Subtitle"
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
-        
+
             <Grid BackgroundColor="Black">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50" />
                     <RowDefinition Height="300" />
                     <RowDefinition Height="50" />
-                    
+
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
-                    
+
                 </Grid.ColumnDefinitions>
-              
+
                 <Label
                     Text="CASINO PARTY"
                     TextColor="White"
@@ -41,14 +41,14 @@
                      Grid.Row="0"
                         Grid.Column="0"
                     />
-                
+
                 <Image Source="https://marketplace.canva.com/EAE-B_Jts5g/1/0/1131w/canva-flyers-fiesta-nocturna-llamativo-fucsia-rseTRWTp8HQ.jpg"
                     x:Name="Casino"
                     VerticalOptions="Center" 
                     HorizontalOptions="Center"
                     Grid.Row="1"
                     Grid.Column="0"/>
-             
+
                 <Button 
                         Text="RESERVAR"
                         x:Name="Reservar"
@@ -85,7 +85,7 @@
                 Grid.Column="1"
                 Clicked="Reservar_Clicked"
                 HorizontalOptions="Center"/>
-               
+
 
                 <Label
                 Text="ZENS PARTY"
@@ -110,7 +110,7 @@
                 Grid.Column="2"
                 Clicked="Reservar_Clicked"
                 HorizontalOptions="Center"/>
-                
+
             </Grid>
 
             <Button
@@ -145,7 +145,7 @@
                 Clicked="LabelDatos_Tapped"
                 Margin="0,10,0,0"
                 HorizontalOptions="Center"/>
-        
+
             <Label x:Name="labelDatos"
                    Text="Presiona el boton para actualizar las fiestas actuales"
                    VerticalOptions="CenterAndExpand" 

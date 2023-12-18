@@ -8,30 +8,24 @@ namespace AuroraApp_MAUI.Views
 {
     public partial class ReservaPage : ContentPage
     {
-        
         public ReservaPage()
         {
-
             InitializeComponent();
-            BindingContext = new ReservaPageViewModel();
-            
-        }
 
+            // Establecer el contexto de enlace para la vista
+            BindingContext = new ReservaPageViewModel();
+        }
 
         private async void BtnReservar_Clicked(object sender, EventArgs e)
         {
-            
-
             // Verificar si los campos de entrada están vacíos
-            if (string.IsNullOrWhiteSpace(entrynombre.Text) ||
-                entryFecha == null ||
-                entryhora == null || string.IsNullOrWhiteSpace(numPersonas.Text) ||
+            if (string.IsNullOrWhiteSpace(entrynombre.Text) || entryFecha.Date == null || entryhora.Time == null ||
                 string.IsNullOrWhiteSpace(numPersonas.Text))
             {
-                
                 await DisplayAlert("Error", "Por favor, completa todos los campos antes de reservar.", "OK");
                 return;
             }
+
             activityIndicator.IsRunning = true;
 
             bool resultadoReserva = await RealizarReservaAsync();
@@ -39,48 +33,47 @@ namespace AuroraApp_MAUI.Views
 
             if (resultadoReserva)
             {
-                // Reserva exitosa, agrega la reserva a la lista
-                (Application.Current.MainPage as Shell)?.CurrentItem?.Route
-                    .FirstOrDefault()?.GetContentPage()?.BindingContext
-                    .GetPropertyValue<mostrarReservaViewModel>("BindingContext")?
-                    .ReservationList.Reservations.Add((BindingContext as ReservaPageViewModel)?.Reservacs);
-                // Restablecer valores después de la reserva exitosa
-                (BindingContext as ReservaPageViewModel)?.ResetValues();
-                
-                
+                // Reserva exitosa, agrega la reserva al ViewModel de MostrarReservas
+                if (BindingContext is ReservaPageViewModel reservaPageViewModel)
+                {
+                    // Obtener la instancia de MostrarReservas del contexto de enlace
+                    if (Shell.Current?.CurrentPage?.BindingContext is mostrarReservaViewModel mostrarReservaVM)
+                    {
+                        mostrarReservaVM.ReservationList.Reservations.Add(reservaPageViewModel.Reservas);
+                    }
 
-                // Reserva exitosa, muestra un mensaje PERSONALIZADO
-                await DisplayAlert("¡Enhorabuena!", "Tu reserva ha sido confirmada con éxito. ¡Esperamos verte pronto!", "OK");
+                    // Restablecer valores después de la reserva exitosa
+                    reservaPageViewModel.ResetValues();
+
+                    // Reserva exitosa, muestra un mensaje PERSONALIZADO
+                    await DisplayAlert("¡Enhorabuena!", "Tu reserva ha sido confirmada con éxito. ¡Esperamos verte pronto!", "OK");
+                }
             }
             else
             {
                 await DisplayAlert("Error", "Lo sentimos, la reserva no se pudo completar en este momento. Por favor, inténtalo nuevamente.", "OK");
             }
-             
         }
 
         private async Task<bool> RealizarReservaAsync()
         {
-            bool reservaExitosa = SimularInteraccionBaseDatos();
-
+            // Aquí puedes realizar interacciones con la base de datos o simulaciones
             await Task.Delay(2000);
-
-            return reservaExitosa;
+            // Devolver true para simular una reserva exitosa
+            return true;
         }
 
         private void Regresar_Clicked(object sender, EventArgs e)
         {
             Shell.Current.GoToAsync("..");
         }
-
-        private bool SimularInteraccionBaseDatos()
-        {
-            Random random = new Random();
-            return random.NextDouble() < 0.8;
-        }
-        
     }
 }
+
+
+
+
+
 
 
 

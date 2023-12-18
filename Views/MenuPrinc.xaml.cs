@@ -48,7 +48,7 @@ namespace AuroraApp_MAUI.Views
 
             Casino.WidthRequest = 210;
             Casino.HeightRequest = 280;
-            Casino.Aspect = Aspect.AspectFill; 
+            Casino.Aspect = Aspect.AspectFill;
             SAVAGE.WidthRequest = 210;
             SAVAGE.HeightRequest = 280;
             SAVAGE.Aspect = Aspect.AspectFill;
@@ -85,7 +85,7 @@ namespace AuroraApp_MAUI.Views
 
         private void verReservas_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync(nameof(mostrarReservas));
+            Shell.Current.GoToAsync(nameof(MostrarReservas));
         }
     }
 

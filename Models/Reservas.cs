@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace AuroraApp_MAUI.Models
 {
-    public class Reservacs
+    public class Reservas
     {
         public string nombre { get; set; }
         public string numPersonas { get; set; }
         public string telefono { get; set; }
-        public DatePicker fecha { get; set; }
-        public TimePicker horaLlegada { get; set; }
-
+        public DateTime fecha { get; set; } // Cambiado a DateTime
+        public TimeSpan horaLlegada { get; set; }
     }
 }

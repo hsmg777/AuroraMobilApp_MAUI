@@ -9,12 +9,12 @@ namespace AuroraApp_MAUI.Models
 {
     public class MostrarReservas
     {
-        public ObservableCollection<Reservacs> Reservations { get; set; }
+        public ObservableCollection<Reservas> Reservations { get; set; }
 
         public MostrarReservas()
         {
-            Reservations = new ObservableCollection<Reservacs>();
+            Reservations = new ObservableCollection<Reservas>();
         }
     }
-        
+
 }

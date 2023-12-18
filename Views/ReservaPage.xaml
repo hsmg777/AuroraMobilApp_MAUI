@@ -16,7 +16,7 @@
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
             <Entry
-                Text="{Binding Reservacs.nombre}"
+                Text="{Binding Reservas.nombre}"
                 TextColor="Gray"
                 x:Name="entrynombre"
                 Placeholder="A nombre de quien va la reserva"
@@ -30,13 +30,13 @@
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
             <Entry
             TextColor="Gray"
-            Text="{Binding Reservacs.telefono}"
+            Text="{Binding Reservas.telefono}"
             x:Name="entryTelefono"
             Keyboard="Telephone"
             Placeholder="ingrese un numero de contacto"
             PlaceholderColor="Gray"/>
         </Frame>
-        
+
         <Label 
         Text="Numero de personas: "
         TextColor="White"
@@ -45,7 +45,7 @@
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
             <Entry
             TextColor="Gray"
-            Text="{Binding Reservacs.numPersonas}"
+            Text="{Binding Reservas.numPersonas}"
             x:Name="numPersonas"
             Placeholder="Cantidad de personas que asistiran"
             PlaceholderColor="Gray"/>
@@ -58,19 +58,19 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <DatePicker TextColor="Gray" x:Name="entryFecha"  Date="{Binding Reservacs.fecha}"/>
-            
+            <DatePicker TextColor="Gray" x:Name="entryFecha"  Date="{Binding Reservas.fecha}"/>
+
         </Frame>
-        
+
         <Label 
             Text="Hora de llegada"
             TextColor="White"
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <TimePicker TextColor="Gray" x:Name="entryhora" Time="{Binding Reservacs.horaLlegada}"/>
+            <TimePicker TextColor="Gray" x:Name="entryhora" Time="{Binding Reservas.horaLlegada}"/>
         </Frame>
-       
+
         <Button
             Text="Reservar"
             TextColor="Black"
@@ -78,9 +78,9 @@
             Clicked="BtnReservar_Clicked"
             HorizontalOptions="Center"
             BackgroundColor="White"/>
-        
+
         <ActivityIndicator x:Name="activityIndicator" IsRunning="False" Color="Blue" />
-        
+
         <Button
          x:Name="Regresar"
          BackgroundColor="White"
@@ -88,7 +88,7 @@
          Text="Regresar"
          Clicked="Regresar_Clicked"
          HorizontalOptions="Center" />
-        
+
 
 
 

@@ -1,16 +1,26 @@
 using AuroraApp_MAUI.Models;
 using AuroraApp_MAUI.ViewModels;
+using Microsoft.Maui.Controls;
+using System;
+using System.Collections.ObjectModel;
 
-namespace AuroraApp_MAUI.Views;
-
-public partial class mostrarReservas : ContentPage
+namespace AuroraApp_MAUI.Views
 {
-	public mostrarReservas()
-	{
-		InitializeComponent();
-        BindingContext = new mostrarReservaViewModel();
+    public partial class MostrarReservas : ContentPage
+    {
+        public MostrarReservas()
+        {
+            InitializeComponent();
+
+            // Agregar reservas predeterminadas
+
+            // Establecer el contexto de enlace para la vista
+            BindingContext = new mostrarReservaViewModel();
+        }
+
         
+        }
     }
-  
-    
-}
+
+
+
