@@ -85,7 +85,7 @@ namespace AuroraApp_MAUI.Views
 
         private void verReservas_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync(nameof(MostrarReservas));
+            Shell.Current.GoToAsync(nameof(mostrarReservas));
         }
     }
 

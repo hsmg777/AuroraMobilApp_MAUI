@@ -10,8 +10,10 @@ public partial class MenuPrincipal : ContentPage
 
     private void IniciarSesion_Clicked(object sender, EventArgs e) {
         Shell.Current.GoToAsync(nameof(IniciarSesion));
+        Console.WriteLine("INICIANDO SESION");
     }
     private void Registrarse_Clicked(object sender, EventArgs e) {
         Shell.Current.GoToAsync(nameof(Registrarse));
+        
     }
 }

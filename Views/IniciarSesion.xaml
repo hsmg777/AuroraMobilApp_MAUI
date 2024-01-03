@@ -36,7 +36,7 @@
              HorizontalOptions="Start" />
             
             <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-                <Entry TextColor="gray" Placeholder="Ingrese su contraseña" x:Name="Contraseña"
+                <Entry TextColor="Gray" Placeholder="Ingrese su contraseña" x:Name="Contraseña"
                        VerticalOptions="FillAndExpand"
                         HorizontalOptions="FillAndExpand"
                                       />

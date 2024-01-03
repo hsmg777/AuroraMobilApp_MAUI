@@ -7,21 +7,19 @@ using System.Collections.ObjectModel;
 
 namespace AuroraApp_MAUI.Views
 {
-    public partial class MostrarReservas : ContentPage
+    public partial class mostrarReservas : ContentPage
     {
-        public MostrarReservas()
+        public mostrarReservas()
         {
             InitializeComponent();
-
-            // Agregar reservas predeterminadas
-
-            // Establecer el contexto de enlace para la vista
             BindingContext = new mostrarReservaViewModel();
         }
 
         private void Regresar_Clicked(object sender, EventArgs e)
         {
-          Shell.Current.GoToAsync("..");
+           
+           Shell.Current.GoToAsync("..");
+            
         }
     }
     }
