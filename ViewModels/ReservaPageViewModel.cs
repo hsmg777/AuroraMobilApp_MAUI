@@ -9,39 +9,41 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Bogus;
 using PropertyChanged;
+using System.ComponentModel;
 
 namespace AuroraApp_MAUI.ViewModels
 {
     [AddINotifyPropertyChangedInterface]
-    public class ReservasPageViewModel 
+    public class ReservasPageViewModel : INotifyPropertyChanged
     {
-        public Reservas reservas {  get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
 
-        ICommand saveCommand;
+        public Reservas Reservas { get; set; }
 
-        public ReservasPageViewModel() {
+        public ICommand SaveCommand { get; }
+
+        public ReservasPageViewModel()
+        {
             GenerateNewReserva();
-            saveCommand = new Command(async => {
-                App.reservaRepo.AddorUpdate(reservas);
+
+            SaveCommand = new Command(async () =>
+            {
+                App.reservaRepo.AddorUpdate(Reservas);
                 Console.WriteLine("ROW ADDED");
                 GenerateNewReserva();
             });
-            
-            
-            
         }
 
-        
-        public void GenerateNewReserva(){
-            reservas = new Faker<Reservas>()
+        public void GenerateNewReserva()
+        {
+            Reservas = new Faker<Reservas>()
                 .RuleFor(x => x.nombre, f => f.Person.FullName)
                 .RuleFor(x => x.numPersonas, f => f.Person.LastName)
                 .RuleFor(x => x.telefono, f => f.Person.Phone)
                 .RuleFor(x => x.fecha, f => f.Person.DateOfBirth).Generate();
-                
+
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Reservas)));
         }
-
     }
-
-
 }
+

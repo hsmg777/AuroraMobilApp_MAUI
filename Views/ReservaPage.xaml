@@ -2,11 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:AuroraApp_MAUI.ViewModels"
-             x:Class="AuroraApp_MAUI.Views.ReservaPage"
-            >
+             x:Class="AuroraApp_MAUI.Views.ReservaPage">
 
-
-    <VerticalStackLayout  BackgroundColor="Black">
+    <VerticalStackLayout BackgroundColor="Black">
         <Label 
             Text="RESERVA:"
             TextColor="White"
@@ -18,11 +16,7 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <Entry
-                Text="{Binding reservas.nombre}"
-                TextColor="Gray"
-                x:Name="entrynombre"
-               />              
+            <Entry Text="{Binding Reservas.nombre}" TextColor="Gray" x:Name="entrynombre" />
         </Frame>
         <Label 
             Text="Telefono:"
@@ -30,27 +24,17 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <Entry
-            Text="{Binding reservas.telefono}"
-            TextColor="Gray"
-            x:Name="entryTelefono"
-            Keyboard="Telephone"
-            PlaceholderColor="Gray"/>
+            <Entry Text="{Binding Reservas.telefono}" TextColor="Gray" x:Name="entryTelefono" Keyboard="Telephone" PlaceholderColor="Gray"/>
         </Frame>
 
         <Label 
-        Text="Numero de personas: "
-        TextColor="White"
-        VerticalOptions="Start" 
-        HorizontalOptions="Start" />
+            Text="Numero de personas: "
+            TextColor="White"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <Entry
-            TextColor="Gray"
-            x:Name="numPersonas"
-            Text="{Binding reservas.numPersonas}"
-            PlaceholderColor="Gray"/>
+            <Entry Text="{Binding Reservas.numPersonas}" TextColor="Gray" x:Name="numPersonas" PlaceholderColor="Gray"/>
         </Frame>
-
 
         <Label 
             Text="Fecha: "
@@ -58,8 +42,7 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <DatePicker TextColor="Gray" x:Name="entryFecha"  Date="{Binding reserva.fecha}"/>
-
+            <DatePicker TextColor="Gray" x:Name="entryFecha" Date="{Binding Reservas.fecha}"/>
         </Frame>
 
         <Label 
@@ -68,27 +51,12 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <TimePicker TextColor="Gray" x:Name="entryhora" Time="{Binding horaLlegada}"/>
+            <TimePicker TextColor="Gray" x:Name="entryhora" Time="{Binding Reservas.horaLlegada}"/>
         </Frame>
-        <Button
-            Text="Reserva"
-            Command="{Binding saveCommand}"
-             />
-       
+        <Button Text="Reserva" Command="{Binding SaveCommand}" />
 
         <ActivityIndicator x:Name="activityIndicator" IsRunning="False" Color="Blue" />
 
-        <Button
-         x:Name="Regresar"
-         BackgroundColor="White"
-         TextColor="Black"
-         Text="Regresar"
-         Clicked="Regresar_Clicked"
-         HorizontalOptions="Center" />
-
-
-
-
-
+        <Button x:Name="Regresar" BackgroundColor="White" TextColor="Black" Text="Regresar" Clicked="Regresar_Clicked" HorizontalOptions="Center" />
     </VerticalStackLayout>
 </ContentPage>

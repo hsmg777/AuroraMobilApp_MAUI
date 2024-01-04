@@ -1,15 +1,6 @@
-﻿using System.Collections.ObjectModel;
-using System.IO;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using Microsoft.Maui.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using AuroraApp_MAUI.Models;
-using Bogus;
 
 namespace AuroraApp_MAUI.ViewModels
 {
@@ -17,18 +8,34 @@ namespace AuroraApp_MAUI.ViewModels
     {
         public List<Reservas> ReservasList { get; set; }
 
-
-        public mostrarReservaViewModel() {
-            Refresh();
+        public mostrarReservaViewModel()
+        {
+            // Agregar dos reservas predeterminadas
+            ReservasList = new List<Reservas>
+            {
+                new Reservas
+                {
+                    nombre = "Jorge Moncayo",
+                    numPersonas = "5",
+                    telefono = "0997589387",
+                    fecha = DateTime.Now.AddDays(1),
+                    horaLlegada = new TimeSpan(18, 0, 0) // 6:00 PM
+                },
+                new Reservas
+                {
+                    nombre = "Hayland Montalvo 2",
+                    numPersonas = "3",
+                    telefono = "0999567465",
+                    fecha = DateTime.Now.AddDays(2),
+                    horaLlegada = new TimeSpan(20, 0, 0) // 8:00 PM
+                }
+            };
+            ReservasList.AddRange(App.reservaRepo.GetAll());
         }
-        private void Refresh() {
-            ReservasList = App.reservaRepo.GetAll();
-
-        }
-
-       
     }
 }
+
+
 
 
 
