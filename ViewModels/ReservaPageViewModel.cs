@@ -33,7 +33,7 @@ namespace AuroraApp_MAUI.ViewModels
                 GenerateNewReserva();
             });
         }
-
+        
         public void GenerateNewReserva()
         {
             Reservas = new Faker<Reservas>()
@@ -41,7 +41,7 @@ namespace AuroraApp_MAUI.ViewModels
                 .RuleFor(x => x.numPersonas, f => f.Person.LastName)
                 .RuleFor(x => x.telefono, f => f.Person.Phone)
                 .RuleFor(x => x.fecha, f => f.Person.DateOfBirth).Generate();
-
+            
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Reservas)));
         }
     }
