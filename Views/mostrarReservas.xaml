@@ -18,7 +18,6 @@
                     <Label Text="{Binding telefono}" FontSize="14"/>
                     <Label Text="{Binding horaLlegada}" FontSize="14" TextColor="Silver"/>
                     <Label Text="{Binding fecha}" FontSize="14" TextColor="Silver"/>
-                    <Button Text="Editar" Command="{Binding BindingContext.EditCommand, Source={x:Reference Name=reservasCollection}}" CommandParameter="{Binding .}" />
                     <Button Text="Eliminar" Command="{Binding BindingContext.DeleteCommand, Source={x:Reference Name=reservasCollection}}" CommandParameter="{Binding .}" />
                 </StackLayout>
             </DataTemplate>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Input;
 using AuroraApp_MAUI.Models;
+using AuroraApp_MAUI.Views;
 
 namespace AuroraApp_MAUI.ViewModels
 {
@@ -24,18 +25,12 @@ namespace AuroraApp_MAUI.ViewModels
             {
                 App.reservaRepo.Delete(reserva.ID);
                 ReservasList.Remove(reserva);
+                await Shell.Current.DisplayAlert("Éxito", "Reserva eliminada con éxito", "OK");
+                await Shell.Current.GoToAsync(nameof(MenuPrinc));
+
             }
         }
 
-        public ICommand EditCommand => new Command<Reservas>(async (reserva) => await EditReserva(reserva));
-
-        private async Task EditReserva(Reservas reserva)
-        {
-            if (reserva != null)
-            {
-                await Shell.Current.GoToAsync($"EditarReservaPage?id={reserva.ID}");
-            }
-        }
 
 
     }
