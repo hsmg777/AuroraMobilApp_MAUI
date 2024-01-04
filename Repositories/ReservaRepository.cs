@@ -63,15 +63,21 @@ namespace AuroraApp_MAUI.Repositories
         {
             try
             {
-                var Reserva =
-                    Get(reservaId);
-                connection.Delete(reservaId);
-            }catch (Exception ex)
+                var Reserva = Get(reservaId);
+                if (Reserva != null)
+                {
+                    connection.Delete(Reserva);
+                    statusMessagge = $"Reserva ID {reservaId} eliminada";
+                }
+            }
+            catch (Exception ex)
             {
-                statusMessagge =
-                   $"Error:{ex.Message}";
+                statusMessagge = $"Error: {ex.Message}";
             }
         }
-        
+
+
+
+
     }
 }
