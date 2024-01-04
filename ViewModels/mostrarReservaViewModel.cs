@@ -11,10 +11,7 @@ namespace AuroraApp_MAUI.ViewModels
         public mostrarReservaViewModel()
         {
             // Agregar dos reservas predeterminadas
-            ReservasList = new List<Reservas>
-            {
-
-            };
+            ReservasList = new List<Reservas>();
             ReservasList.AddRange(App.reservaRepo.GetAll());
         }
     }

@@ -55,6 +55,12 @@
             </Frame>
             
             <Button
+                BackgroundColor="White"
+                TextColor="Black"
+                x:Name="Registrar"
+                Text="Registarse"
+                HorizontalOptions="Center" />
+            <Button
             BackgroundColor="White"
             TextColor="Black"
             x:Name="Regresar"
