@@ -16,7 +16,7 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <Entry Text="{Binding Reservas.nombre}" TextColor="Gray" x:Name="entrynombre" />
+            <Entry  TextColor="Gray" x:Name="entrynombre" />
         </Frame>
         <Label 
             Text="Telefono:"
@@ -24,7 +24,7 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <Entry Text="{Binding Reservas.telefono}" TextColor="Gray" x:Name="entryTelefono" Keyboard="Telephone" PlaceholderColor="Gray"/>
+            <Entry  TextColor="Gray" x:Name="entryTelefono" Keyboard="Telephone" PlaceholderColor="Gray"/>
         </Frame>
 
         <Label 
@@ -33,7 +33,7 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <Entry Text="{Binding Reservas.numPersonas}" TextColor="Gray" x:Name="numPersonas" PlaceholderColor="Gray"/>
+            <Entry  TextColor="Gray" x:Name="numPersonas" PlaceholderColor="Gray"/>
         </Frame>
 
         <Label 
@@ -42,7 +42,7 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <DatePicker TextColor="Gray" x:Name="entryFecha" Date="{Binding Reservas.fecha}"/>
+            <DatePicker TextColor="Gray" x:Name="entryFecha" />
         </Frame>
 
         <Label 
@@ -51,9 +51,9 @@
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-            <TimePicker TextColor="Gray" x:Name="entryhora" Time="{Binding Reservas.horaLlegada}"/>
+            <Entry TextColor="Gray" x:Name="entryhora" />
         </Frame>
-        <Button Text="Reserva" Command="{Binding SaveCommand}" />
+        <Button Text="Reserva" Clicked="Reserva_Clicked" />
 
         <ActivityIndicator x:Name="activityIndicator" IsRunning="False" Color="Blue" />
 

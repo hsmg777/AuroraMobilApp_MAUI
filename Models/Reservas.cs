@@ -10,22 +10,13 @@ using TableAttribute = SQLite.TableAttribute;
 
 namespace AuroraApp_MAUI.Models
 {
-
-    public class Reservas
+    public class Rootobject
     {
-        [PrimaryKey, AutoIncrement]
-        public int ID { get; set; }
+        public int idReserva { get; set; }
         public string nombre { get; set; }
-        public string numPersonas { get; set; }
+        public int numeroPersonas { get; set; }
         public string telefono { get; set; }
-        public DateTime fecha { get; set; } // Cambiado a DateTime
-        public TimeSpan horaLlegada { get; set; }
-
-        public static implicit operator int(Reservas v)
-        {
-            throw new NotImplementedException();
-        }
-
-
+        public DateTime fecha { get; set; }
+        public string horaLlega { get; set; }
     }
 }

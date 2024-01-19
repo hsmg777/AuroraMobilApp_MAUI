@@ -10,39 +10,33 @@ using System.Windows.Input;
 using Bogus;
 using PropertyChanged;
 using System.ComponentModel;
+using Newtonsoft.Json;
 
 namespace AuroraApp_MAUI.ViewModels
 {
-    [AddINotifyPropertyChangedInterface]
-    public class ReservasPageViewModel : INotifyPropertyChanged
+    
+    public class ReservasPageViewModel 
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public Reservas Reservas { get; set; }
-
-        public ICommand SaveCommand { get; }
-
-        public ReservasPageViewModel()
+        public async Task<bool> CrearReserva(string nombre, string telefono, int numeroPersonas, DateTime fecha, string tiempo)
         {
-            GenerateNewReserva();
-
-            SaveCommand = new Command(async () =>
+            Rootobject reserva = new Rootobject
             {
-                App.reservaRepo.AddorUpdate(Reservas);
-                Console.WriteLine("ROW ADDED");
-                GenerateNewReserva();
-            });
-        }
-        
-        public void GenerateNewReserva()
-        {
-            Reservas = new Faker<Reservas>()
-                .RuleFor(x => x.nombre, f => f.Person.FullName)
-                .RuleFor(x => x.numPersonas, f => f.Person.LastName)
-                .RuleFor(x => x.telefono, f => f.Person.Phone)
-                .RuleFor(x => x.fecha, f => f.Person.DateOfBirth).Generate();
-            
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Reservas)));
+                nombre = nombre,
+                telefono = telefono,
+                numeroPersonas = numeroPersonas,
+                fecha = fecha,
+                horaLlega = tiempo
+            };
+
+            string jsonReserva = JsonConvert.SerializeObject(reserva);
+
+            string apiUrl = "https://localhost:7051/api/Reservas";
+            HttpClient httpClient = new HttpClient();
+            StringContent content = new StringContent(jsonReserva, Encoding.UTF8, "application/json");
+
+            HttpResponseMessage response = await httpClient.PostAsync(apiUrl, content);
+
+            return response.IsSuccessStatusCode;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using AuroraApp_MAUI.Repositories;
+﻿
 
 namespace AuroraApp_MAUI;
 
@@ -15,7 +15,7 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		builder.Services.AddSingleton<ReservaRepository>();
+		
 
 		return builder.Build();
 	}
