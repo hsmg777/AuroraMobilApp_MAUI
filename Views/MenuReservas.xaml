@@ -9,14 +9,14 @@
         <HorizontalStackLayout>
             <ListView x:Name="ReservasListView" ItemsSource="{Binding Fiestas}">
                 <ListView.Header>
-                    <Label Text="Lista de Reservas" FontAttributes="Bold" HorizontalOptions="Center" />
+                    <Label Text="Seleccione la reserva:" TextColor="White" HorizontalOptions="Center" />
                 </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout>
-                                <Label Text="{Binding nombreFiesta}" FontAttributes="Bold" />
-                                <Label Text="{Binding idFiesta}" />
+                                <Label Text="{Binding nombreFiesta}" TextColor="White" />
+                                <Label Text="{Binding idFiesta}" TextColor="Gray" />
                                 <Image Source="{Binding imagen}" Aspect="AspectFit" HeightRequest="100" />
                                 <Button Text="RESERVAR" Clicked="Reservar_Clicked" BackgroundColor="White" TextColor="Black"  HorizontalOptions="Center"/>
                             </StackLayout>
