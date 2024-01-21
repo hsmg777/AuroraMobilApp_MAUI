@@ -12,111 +12,28 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
             <Label 
-            Text="Reserve la fiesta que desee:"
-            TextColor="White"
-            FontSize="Subtitle"
-            VerticalOptions="Start" 
-            HorizontalOptions="Start" />
+            x:Name="labelDatos"
+            Text="Al presionar el boton se actualizaran a la fiestas recientes y disponibles"
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand" 
+            FontSize="15" 
+            TextColor="White" />
+            
+            <Button 
+             Text="VER FIESTAS"
+             Clicked="Actualizar_Clicked"
+             BackgroundColor="WhiteSmoke"
+             TextColor="Black"
+             HeightRequest="50"
+             WidthRequest="150"
+             Margin="0,10,0,0"
+             HorizontalOptions="Center"/>
 
-            <Grid BackgroundColor="Black">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="300" />
-                    <RowDefinition Height="50" />
-
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-
-                </Grid.ColumnDefinitions>
-
-                <Label
-                    Text="CASINO PARTY"
-                    TextColor="White"
-                    FontSize="Large"
-                    VerticalOptions="Center" 
-                    HorizontalOptions="Center"
-                     Grid.Row="0"
-                        Grid.Column="0"
-                    />
-
-                <Image Source="https://marketplace.canva.com/EAE-B_Jts5g/1/0/1131w/canva-flyers-fiesta-nocturna-llamativo-fucsia-rseTRWTp8HQ.jpg"
-                    x:Name="Casino"
-                    VerticalOptions="Center" 
-                    HorizontalOptions="Center"
-                    Grid.Row="1"
-                    Grid.Column="0"/>
-
-                <Button 
-                        Text="RESERVAR"
-                        x:Name="Reservar"
-                        Clicked="Reservar_Clicked"
-                        BackgroundColor="White"
-                        
-                        TextColor="Black"
-                        Grid.Row="2"
-                        Grid.Column="0"
-                        HorizontalOptions="Center"/>
-
-
-
-                <Label
-                Text="SAVAGE PARTY"
-                FontSize="Large"
-                TextColor="White"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center"
-                Grid.Row="0"
-                Grid.Column="1"
-                />
-                <Image Source="https://previews.123rf.com/images/vasilyrosca/vasilyrosca1702/vasilyrosca170200232/71501661-dise%C3%B1o-de-flyer-de-fiesta-disco-banner-de-baile-para-club-de-m%C3%BAsica-plantilla-de-discoteca-vida.jpg"
-                x:Name="SAVAGE"
-                VerticalOptions="Fill" 
-                HorizontalOptions="Fill"
-                   Grid.Row="1"
-                 Grid.Column="1"/>
-                <Button 
-                Text="RESERVAR"
-                BackgroundColor="White"
-                TextColor="Black"
-                Grid.Row="2"
-                Grid.Column="1"
-                Clicked="Reservar_Clicked"
-                HorizontalOptions="Center"/>
-
-
-                <Label
-                Text="ZENS PARTY"
-                FontSize="Large"
-                TextColor="White"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center"
-                Grid.Row="0"
-                Grid.Column="2"
-            />
-                <Image Source="https://i.pinimg.com/originals/e5/a6/43/e5a643a20d811a0f2d449eaa47052a19.jpg"
-                x:Name="Zens"
-                VerticalOptions="Fill" 
-                HorizontalOptions="Fill"
-                Grid.Row="1"
-                Grid.Column="2"/>
-                <Button 
-                Text="RESERVAR"
-                Grid.Row="2"
-                BackgroundColor="White"
-                TextColor="Black"
-                Grid.Column="2"
-                Clicked="Reservar_Clicked"
-                HorizontalOptions="Center"/>
-
-            </Grid>
+            
 
             <Button
                 x:Name="Regresar"
-                Text="Regresar"
+                Text="REGRESAR"
                 BackgroundColor="WhiteSmoke"
                 TextColor="Black"
                 HeightRequest="50"
@@ -124,35 +41,16 @@
                 Clicked="Regresar_Clicked"
                 HorizontalOptions="Center" />
             <Button
-                Text="Ver Reservas"
+                Text="MIS RESERVAS"
                 x:Name="VerReservas"
                 BackgroundColor="WhiteSmoke"
                 TextColor="Black"
                 HeightRequest="50"
                 WidthRequest="150"
                 Clicked="verReservas_Clicked"
-                HorizontalOptions="Center"
-                
-                />
-            <Button 
-                x:Name="Actualizar"
-                Text="Actualizar"
-                BackgroundColor="WhiteSmoke"
-                TextColor="Black"
-                HeightRequest="50"
-                WidthRequest="150"
-                Grid.Row="2"
-                Grid.Column="2"
-                Clicked="LabelDatos_Tapped"
-                Margin="0,10,0,0"
                 HorizontalOptions="Center"/>
-
-            <Label x:Name="labelDatos"
-                   Text="Presiona el boton para actualizar las fiestas actuales"
-                   VerticalOptions="CenterAndExpand" 
-                   HorizontalOptions="CenterAndExpand" 
-                   FontSize="15" 
-                   TextColor="White" />
+            
+           
 
 
         </VerticalStackLayout>

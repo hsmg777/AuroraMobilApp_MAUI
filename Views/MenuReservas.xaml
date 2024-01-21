@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AuroraApp_MAUI.Views.MenuReservas"
+             Title="MenuReservas"
+             BackgroundColor="Black">
+
+    <ScrollView>
+        <HorizontalStackLayout>
+            <ListView x:Name="ReservasListView" ItemsSource="{Binding Fiestas}">
+                <ListView.Header>
+                    <Label Text="Lista de Reservas" FontAttributes="Bold" HorizontalOptions="Center" />
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding nombreFiesta}" FontAttributes="Bold" />
+                                <Label Text="{Binding idFiesta}" />
+                                <Image Source="{Binding imagen}" Aspect="AspectFit" HeightRequest="100" />
+                                <Button Text="RESERVAR" Clicked="Reservar_Clicked" BackgroundColor="White" TextColor="Black"  HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </HorizontalStackLayout>
+    </ScrollView>
+   
+
+</ContentPage>
