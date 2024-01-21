@@ -4,7 +4,7 @@
              x:Class="AuroraApp_MAUI.Views.mostrarReservas"
              Title="Tus Reservas">
 
-    <CollectionView x:Name="reservasCollection" ItemsSource="{Binding ReservasList}" BackgroundColor="Black" >
+    <CollectionView x:Name="reservasCollection" ItemsSource="{Binding Reservas}" BackgroundColor="Black" >
 
         <CollectionView.ItemsLayout>
             <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
@@ -16,15 +16,14 @@
                     <StackLayout>
                    
                     <Label Text="{Binding nombre}" FontSize="20" TextColor="White"/>
-                    <Label Text="{Binding numPersonas}" FontSize="14" TextColor="White"/>
+                    <Label Text="{Binding numeroPersonas}" FontSize="14" TextColor="White"/>
                     <Label Text="{Binding telefono}" FontSize="14" TextColor="White"/>
-                    <Label Text="{Binding horaLlegada}" FontSize="14" TextColor="White"/>
+                    <Label Text="{Binding horaLlega}" FontSize="14" TextColor="White"/>
                     <Label Text="{Binding fecha}" FontSize="14" TextColor="White"/>
                  
                     <Button BackgroundColor="White"
                             TextColor="Black"
-                            Text="Eliminar" Command="{Binding BindingContext.DeleteCommand, Source={x:Reference Name=reservasCollection}}" 
-                            CommandParameter="{Binding .}" />
+                            Text="Eliminar" Command="{Binding EliminarCommand}" BorderColor="Red" />
                   
                 </StackLayout>
                 </Frame>

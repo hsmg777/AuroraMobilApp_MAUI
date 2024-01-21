@@ -7,20 +7,25 @@ using System.Collections.ObjectModel;
 
 namespace AuroraApp_MAUI.Views
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class mostrarReservas : ContentPage
     {
+
+        private mostrarReservaViewModel _viewModel;
         public mostrarReservas()
         {
             InitializeComponent();
-            BindingContext = new mostrarReservaViewModel();
+            _viewModel = new mostrarReservaViewModel ();
+            BindingContext = _viewModel;
         }
 
-        private void Regresar_Clicked(object sender, EventArgs e)
+        protected override async void OnAppearing()
         {
-           
-           Shell.Current.GoToAsync("..");
-            
+            base.OnAppearing();
+            await _viewModel.LoadReservasAsync();
         }
+
+
     }
     }
 
