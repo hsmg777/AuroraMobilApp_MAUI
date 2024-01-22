@@ -78,6 +78,11 @@ namespace AuroraApp_MAUI.Views
         {
             Shell.Current.GoToAsync(nameof(ReservaPage));
         }
+
+        private void cocteles_Cliked(object sender, EventArgs e)
+        {
+            Shell.Current.GoToAsync(nameof(MenuCocteles));
+        }
     }
 
 }

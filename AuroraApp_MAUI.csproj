@@ -56,6 +56,9 @@
 	  <MauiXaml Update="Views\IniciarSesion.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\MenuCocteles.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\MenuPrinc.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -60,17 +60,15 @@
                 
                 </HorizontalStackLayout>
 
-
-
-    <Button
-                x:Name="Regresar"
-                Text="REGRESAR"
+            <Button
+                Text="VER MENU COCTELES"
                 BackgroundColor="WhiteSmoke"
                 TextColor="Black"
                 HeightRequest="50"
                 WidthRequest="150"
-                Clicked="Regresar_Clicked"
-                HorizontalOptions="Center" />
+                Clicked="cocteles_Cliked"
+                HorizontalOptions="Center"
+                />
             <Button
                 Text="MIS RESERVAS"
                 x:Name="VerReservas"
@@ -80,6 +78,16 @@
                 WidthRequest="150"
                 Clicked="verReservas_Clicked"
                 HorizontalOptions="Center"/>
+            <Button
+                x:Name="Regresar"
+                Text="REGRESAR"
+                BackgroundColor="WhiteSmoke"
+                TextColor="Black"
+                HeightRequest="50"
+                WidthRequest="150"
+                Clicked="Regresar_Clicked"
+                HorizontalOptions="Center" />
+            
             
            
 

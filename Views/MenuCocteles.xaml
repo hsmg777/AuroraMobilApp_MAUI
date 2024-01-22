@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AuroraApp_MAUI.Views.MenuCocteles"
+             Title="MenuCocteles">
+    <VerticalStackLayout BackgroundColor="Black">
+        <Label Text="AURORA MENU COCTAILS" TextColor="WhiteSmoke" FontSize="30" HorizontalTextAlignment="Center"/>
+        <Label Text="La mejor experiencia en reservas" TextColor="LightGreen" FontSize="15" HorizontalTextAlignment="Start"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="coctel1" Grid.Row="0" Grid.Column="0" Text="a"/>
+            <Label x:Name="idcoctel1" Grid.Row="0" Grid.Column="0" Text="a"/>
+            <Image x:Name="imagen1" Grid.Row="0" Grid.Column="0"/>
+
+            <Label x:Name="coctel2" Grid.Row="0" Grid.Column="1" Text="a"/>
+            <Label x:Name="idcoctel2" Grid.Row="0" Grid.Column="1" Text="a"/>
+            <Image x:Name="imagen2" Grid.Row="0" Grid.Column="1"/>
+
+            <Label x:Name="coctel3" Grid.Row="0" Grid.Column="2" Text="a"/>
+            <Label x:Name="idcoctel3" Grid.Row="0" Grid.Column="2" Text="a"/>
+            <Image x:Name="imagen3" Grid.Row="0" Grid.Column="2"/>
+
+            <Label x:Name="coctel4" Grid.Row="1" Grid.Column="0" Text="a"/>
+            <Label x:Name="idcoctel4" Grid.Row="1" Grid.Column="0" Text="a"/>
+            <Image x:Name="imagen4" Grid.Row="1" Grid.Column="0"/>
+
+            <Label x:Name="coctel5" Grid.Row="1" Grid.Column="1" Text="a"/>
+            <Label x:Name="idcoctel5" Grid.Row="1" Grid.Column="1" Text="a"/>
+            <Image x:Name="imagen5" Grid.Row="1" Grid.Column="1"/>
+
+            <Label x:Name="coctel6" Grid.Row="1" Grid.Column="2" Text="a"/>
+            <Label x:Name="idcoctel6" Grid.Row="1" Grid.Column="2" Text="a"/>
+            <Image x:Name="imagen6" Grid.Row="1" Grid.Column="2"/>
+
+            <Label x:Name="coctel7" Grid.Row="2" Grid.Column="0" Text="a"/>
+            <Label x:Name="idcoctel7" Grid.Row="2" Grid.Column="0" Text="a"/>
+            <Image x:Name="imagen7" Grid.Row="2" Grid.Column="0" />
+
+            <Label x:Name="coctel8" Grid.Row="2" Grid.Column="1" Text="a"/>
+            <Label x:Name="idcoctel8" Grid.Row="2" Grid.Column="1" Text="a"/>
+            <Image x:Name="imagen8" Grid.Row="2" Grid.Column="1"/>
+
+            <Label x:Name="coctel9" Grid.Row="2" Grid.Column="2" Text="a"/>
+            <Label x:Name="idcoctel9" Grid.Row="2" Grid.Column="2" Text="a"/>
+            <Image x:Name="imagen9" Grid.Row="2" Grid.Column="2"/>
+
+            <Label x:Name="coctel10" Grid.Row="3" Grid.Column="0" Text="a"/>
+            <Label x:Name="idcoctel10" Grid.Row="3" Grid.Column="0" Text="a"/>
+            <Image x:Name="imagen10" Grid.Row="3" Grid.Column="0"/>
+
+            <Label x:Name="coctel11" Grid.Row="3" Grid.Column="1" Text="a"/>
+            <Label x:Name="idcoctel11" Grid.Row="3" Grid.Column="1" Text="a"/>
+            <Image x:Name="imagen11" Grid.Row="3" Grid.Column="1"/>
+
+            <Label x:Name="coctel12" Grid.Row="3" Grid.Column="2" Text="a"/>
+            <Label x:Name="idcoctel12" Grid.Row="3" Grid.Column="2" Text="a"/>
+            <Image x:Name="imagen12" Grid.Row="3" Grid.Column="2"/>
+
+            <Label x:Name="coctel13" Grid.Row="4" Grid.Column="0" Text="a"/>
+            <Label x:Name="idcoctel13" Grid.Row="4" Grid.Column="0" Text="a"/>
+            <Image x:Name="imagen13" Grid.Row="4" Grid.Column="0"/>
+
+            <Label x:Name="coctel14" Grid.Row="4" Grid.Column="1" Text="a"/>
+            <Label x:Name="idcoctel14"   Grid.Row="4" Grid.Column="1" Text="a"/>
+            <Image x:Name="imagen14" Grid.Row="4" Grid.Column="1"/>
+
+            <Label x:Name="coctel15" Grid.Row="4" Grid.Column="2" Text="a"/>
+            <Label x:Name="idcoctel15" Grid.Row="4" Grid.Column="2" Text="a"/>
+            <Image x:Name="imagenl15" Grid.Row="4" Grid.Column="2"/>
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
