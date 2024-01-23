@@ -22,7 +22,7 @@
                 <Entry 
                     Placeholder="Ingrese su usuario" 
                     TextColor="Gray" 
-                    x:Name="Usuario"
+                    x:Name="lblUsuario"
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
                     />      
@@ -37,10 +37,10 @@
              HorizontalOptions="Start" />
             
             <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-                <Entry TextColor="Gray" Placeholder="Ingrese su contraseña" x:Name="Contraseña"
+                <Entry TextColor="Gray" Placeholder="Ingrese su contraseña" x:Name="lblContraseña"
                        VerticalOptions="FillAndExpand"
                         HorizontalOptions="FillAndExpand"
-                                      />
+                                  IsPassword="False" />
             </Frame>
             
 

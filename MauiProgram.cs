@@ -17,6 +17,7 @@ public static class MauiProgram
 
 		
 		builder.Services.AddSingleton<cotizacionRepository>();
-		return builder.Build();
+        builder.Services.AddSingleton<userRepository>();
+        return builder.Build();
 	}
 }

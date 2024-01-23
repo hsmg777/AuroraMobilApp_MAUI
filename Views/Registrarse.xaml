@@ -14,37 +14,14 @@
             HorizontalOptions="Center" />
             <Label 
             TextColor="White"
-            Text="Nombre:"
+            Text="Ingrese un nombre de usuario:"
             FontSize="18"
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
             <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-                <Entry PlaceholderColor="Gray" Placeholder="Ingrese su nombre" x:Name="lblNombre"/>
+                <Entry TextColor="White" PlaceholderColor="Gray" Placeholder="Ingrese su nombre" x:Name="lblUser"/>
             </Frame>
-            
-            
-            <Label
-                TextColor="White"
-                Text="Apellido:"
-                FontSize="18"
-                VerticalOptions="Start"
-                HorizontalOptions="Start"/>
-            <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-                <Entry  PlaceholderColor="Gray" Placeholder="Ingrese su apellido" x:Name="lblApellido"/>
-            </Frame>
-           
-
-            <Label
-                Text="Usuario:"
-                TextColor="White"
-                FontSize="18"
-                VerticalOptions="Start"
-                HorizontalOptions="Start"/>
-            <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-                 <Entry PlaceholderColor="Gray" Placeholder="Ingrese un nombre nuevo de usuario" x:Name="lblUsuario"/>
-            </Frame>
-           
-
+         
             <Label
                 Text="Ingrese una nueva contraseña:"
                 TextColor="White"
@@ -52,13 +29,21 @@
                 VerticalOptions="Start"
                 HorizontalOptions="Start"/>
             <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
-                <Entry PlaceholderColor="Gray" Placeholder="Contraseña" x:Name="lblContraseña"/>
+                <Entry TextColor="White" PlaceholderColor="Gray" Placeholder="Contraseña" x:Name="lblContraseña"/>
             </Frame>
-            
+            <Label
+                Text="Vuelva a ingresar la contraseña:"
+                TextColor="White"
+                FontSize="18"
+                VerticalOptions="Start"
+                HorizontalOptions="Start"/>
+            <Frame BorderColor="#007ACC" BackgroundColor="Black" HasShadow="False" Padding="0" Margin="0">
+                <Entry TextColor="White" PlaceholderColor="Gray" Placeholder="Contraseña" x:Name="lblContraseñaVeri"/>
+            </Frame>
             <Button
                 BackgroundColor="White"
                 TextColor="Black"
-                x:Name="Registrar"
+                Clicked="registrarse_CLicked"
                 Text="Registarse"
                 HorizontalOptions="Center" />
             <Button

@@ -35,8 +35,14 @@ namespace AuroraApp_MAUI.Views
 
         private async Task<bool> RealizarInicioSesionAsync()
         {
-            await Task.Delay(3000);
+            string usuario = lblUsuario.Text;
+            string contraseña = lblContraseña.Text;
+            bool result = false;
+            result =  App.userRepo.VerificarCredenciales(usuario, contraseña);
+            if (result) { 
             return true;
+            } 
+            return false;
         }
 
         private async void Regresar_Clicked(object sender, EventArgs e)
