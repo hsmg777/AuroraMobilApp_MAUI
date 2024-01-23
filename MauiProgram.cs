@@ -1,4 +1,4 @@
-﻿
+﻿using AuroraApp_MAUI.Repositories;
 
 namespace AuroraApp_MAUI;
 
@@ -16,7 +16,7 @@ public static class MauiProgram
 			});
 
 		
-
+		builder.Services.AddSingleton<cotizacionRepository>();
 		return builder.Build();
 	}
 }

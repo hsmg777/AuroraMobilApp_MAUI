@@ -13,7 +13,7 @@ public partial class AppShell : Shell
 		Routing.RegisterRoute(nameof(ReservaPage), typeof(ReservaPage));
 		Routing.RegisterRoute(nameof(mostrarReservas), typeof(mostrarReservas));
         Routing.RegisterRoute(nameof(MenuCocteles), typeof(MenuCocteles));
-
+        Routing.RegisterRoute(nameof(misCoctelesViews), typeof(misCoctelesViews));
 
     }
 }

@@ -37,6 +37,15 @@ namespace AuroraApp_MAUI.Views
             {
                 await DisplayAlert("Error", "Hubo un error al realizar la reserva", "Aceptar");
             }
+            entrynombre.Text = null;
+            entryTelefono.Text = null;
+            numPersonas.Text = null;
+            entryFecha.Date = DateTime.Now;
+            entryhora.Text = null;
+
+
+
+
         }
     }
 }

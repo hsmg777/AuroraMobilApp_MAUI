@@ -3,11 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AuroraApp_MAUI.Views.MenuCocteles"
              Title="MenuCocteles">
-    <VerticalStackLayout BackgroundColor="Black">
+    <ScrollView>
+    <VerticalStackLayout BackgroundColor="Black" Spacing="8">
         <Label Text="AURORA MENU COCTAILS" TextColor="WhiteSmoke" FontSize="30" HorizontalTextAlignment="Center"/>
         <Label Text="La mejor experiencia en reservas" TextColor="LightGreen" FontSize="15" HorizontalTextAlignment="Start"/>
+            <Button Text="Desplegar Menu" Clicked="verCocteles_Clicked" HorizontalOptions="Center" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
 
-        <Grid>
+        <Grid ColumnSpacing="5" RowSpacing="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -22,67 +24,131 @@
                 <ColumnDefinition Width="*" />
                 
             </Grid.ColumnDefinitions>
+        
+                <StackLayout Grid.Column="0" Grid.Row="0" Spacing="3">
+                    <Label x:Name="coctel1"   HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel1"   HorizontalOptions="Center" TextColor="Gray" FontSize="18" VerticalOptions="Center" HeightRequest="40"/>
+                    <Image x:Name="imagen1"   HorizontalOptions="Center" VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel1" Grid.Row="0" Grid.Column="0" Text="a"/>
-            <Label x:Name="idcoctel1" Grid.Row="0" Grid.Column="0" Text="a"/>
-            <Image x:Name="imagen1" Grid.Row="0" Grid.Column="0"/>
+                <StackLayout Grid.Row="0" Grid.Column="1" Spacing="3">
+                    <Label x:Name="coctel2"  HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel2"  HorizontalOptions="Center" TextColor="Gray" FontSize="18" VerticalOptions="Center" HeightRequest="40"/>
+                    <Image x:Name="imagen2"  VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva2" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked2" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel2" Grid.Row="0" Grid.Column="1" Text="a"/>
-            <Label x:Name="idcoctel2" Grid.Row="0" Grid.Column="1" Text="a"/>
-            <Image x:Name="imagen2" Grid.Row="0" Grid.Column="1"/>
+                <StackLayout Grid.Row="0" Grid.Column="2" Spacing="3">
+                    <Label x:Name="coctel3"  HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel3" HorizontalOptions="Center" TextColor="Gray" FontSize="18" VerticalOptions="Center" HeightRequest="40" />
+                    <Image x:Name="imagen3" VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva3" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked3" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel3" Grid.Row="0" Grid.Column="2" Text="a"/>
-            <Label x:Name="idcoctel3" Grid.Row="0" Grid.Column="2" Text="a"/>
-            <Image x:Name="imagen3" Grid.Row="0" Grid.Column="2"/>
+                <StackLayout Grid.Row="1" Grid.Column="0" Spacing="3">
+                    <Label x:Name="coctel4"  HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel4"  HorizontalOptions="Center" TextColor="Gray" FontSize="18" VerticalOptions="Center" HeightRequest="40"/>
+                    <Image x:Name="imagen4"  VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva4" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked4" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel4" Grid.Row="1" Grid.Column="0" Text="a"/>
-            <Label x:Name="idcoctel4" Grid.Row="1" Grid.Column="0" Text="a"/>
-            <Image x:Name="imagen4" Grid.Row="1" Grid.Column="0"/>
+                <StackLayout Grid.Row="1" Grid.Column="1" Spacing="3">
+                    <Label x:Name="coctel5"  HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel5"  HorizontalOptions="Center" TextColor="Gray" FontSize="18" VerticalOptions="Center" HeightRequest="40"/>
+                    <Image x:Name="imagen5"  VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva5" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked5" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel5" Grid.Row="1" Grid.Column="1" Text="a"/>
-            <Label x:Name="idcoctel5" Grid.Row="1" Grid.Column="1" Text="a"/>
-            <Image x:Name="imagen5" Grid.Row="1" Grid.Column="1"/>
+                <StackLayout Grid.Row="1" Grid.Column="2" Spacing="3">
+                    <Label x:Name="coctel6"  HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel6"  HorizontalOptions="Center" TextColor="Gray" FontSize="18" VerticalOptions="Center" HeightRequest="40"/>
+                    <Image x:Name="imagen6"  VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva6" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked6" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel6" Grid.Row="1" Grid.Column="2" Text="a"/>
-            <Label x:Name="idcoctel6" Grid.Row="1" Grid.Column="2" Text="a"/>
-            <Image x:Name="imagen6" Grid.Row="1" Grid.Column="2"/>
+                <StackLayout Grid.Row="2" Grid.Column="0" Spacing="3">
+                    <Label x:Name="coctel7"  HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel7"  HorizontalOptions="Center" TextColor="Gray" FontSize="18" VerticalOptions="Center" HeightRequest="40"/>
+                    <Image x:Name="imagen7" VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva7" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked7" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel7" Grid.Row="2" Grid.Column="0" Text="a"/>
-            <Label x:Name="idcoctel7" Grid.Row="2" Grid.Column="0" Text="a"/>
-            <Image x:Name="imagen7" Grid.Row="2" Grid.Column="0" />
+                <StackLayout Grid.Row="2" Grid.Column="1" Spacing="3">
+                    <Label x:Name="coctel8" HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel8" HorizontalOptions="Center" TextColor="Gray" FontSize="18" VerticalOptions="Center" HeightRequest="40" />
+                    <Image x:Name="imagen8"  VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva8" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked8" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel8" Grid.Row="2" Grid.Column="1" Text="a"/>
-            <Label x:Name="idcoctel8" Grid.Row="2" Grid.Column="1" Text="a"/>
-            <Image x:Name="imagen8" Grid.Row="2" Grid.Column="1"/>
+                <StackLayout Grid.Row="2" Grid.Column="2" Spacing="3">
+                    <Label x:Name="coctel9"  HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel9"  HorizontalOptions="Center" TextColor="Gray" FontSize="18" VerticalOptions="Center" HeightRequest="40"/>
+                    <Image x:Name="imagen9"  VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva9" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked9" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel9" Grid.Row="2" Grid.Column="2" Text="a"/>
-            <Label x:Name="idcoctel9" Grid.Row="2" Grid.Column="2" Text="a"/>
-            <Image x:Name="imagen9" Grid.Row="2" Grid.Column="2"/>
+                <StackLayout Grid.Row="3" Grid.Column="0" Spacing="3">
+                    <Label x:Name="coctel10"  HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel10"  HorizontalOptions="Center" TextColor="Gray" FontSize="18"  VerticalOptions="Center" HeightRequest="40"/>
+                    <Image x:Name="imagen10"  VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva10" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked10" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel10" Grid.Row="3" Grid.Column="0" Text="a"/>
-            <Label x:Name="idcoctel10" Grid.Row="3" Grid.Column="0" Text="a"/>
-            <Image x:Name="imagen10" Grid.Row="3" Grid.Column="0"/>
+                <StackLayout Grid.Row="3" Grid.Column="1" Spacing="3">
+                    <Label x:Name="coctel11"  HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel11" HorizontalOptions="Center" TextColor="Gray" FontSize="18" VerticalOptions="Center" HeightRequest="40"/>
+                    <Image x:Name="imagen11" VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva11" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked11" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel11" Grid.Row="3" Grid.Column="1" Text="a"/>
-            <Label x:Name="idcoctel11" Grid.Row="3" Grid.Column="1" Text="a"/>
-            <Image x:Name="imagen11" Grid.Row="3" Grid.Column="1"/>
+                <StackLayout Grid.Row="3" Grid.Column="2" Spacing="3">
+                    <Label x:Name="coctel12"  HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel12"  HorizontalOptions="Center" TextColor="Gray" FontSize="18" VerticalOptions="Center" HeightRequest="40"/>
+                    <Image x:Name="imagen12"  VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva12" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked12" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel12" Grid.Row="3" Grid.Column="2" Text="a"/>
-            <Label x:Name="idcoctel12" Grid.Row="3" Grid.Column="2" Text="a"/>
-            <Image x:Name="imagen12" Grid.Row="3" Grid.Column="2"/>
+                <StackLayout Grid.Row="4" Grid.Column="0" Spacing="3">
+                    <Label x:Name="coctel13"  HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel13" HorizontalOptions="Center" TextColor="Gray" FontSize="18" VerticalOptions="Center" HeightRequest="40"/>
+                    <Image x:Name="imagen13" VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva13" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked13" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel13" Grid.Row="4" Grid.Column="0" Text="a"/>
-            <Label x:Name="idcoctel13" Grid.Row="4" Grid.Column="0" Text="a"/>
-            <Image x:Name="imagen13" Grid.Row="4" Grid.Column="0"/>
+                <StackLayout Grid.Row="4" Grid.Column="1" Spacing="3">
+                    <Label x:Name="coctel14"  HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel14" HorizontalOptions="Center" TextColor="Gray" FontSize="18" VerticalOptions="Center" HeightRequest="40" />
+                    <Image x:Name="imagen14" VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva14" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked14" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel14" Grid.Row="4" Grid.Column="1" Text="a"/>
-            <Label x:Name="idcoctel14"   Grid.Row="4" Grid.Column="1" Text="a"/>
-            <Image x:Name="imagen14" Grid.Row="4" Grid.Column="1"/>
+                <StackLayout Grid.Row="4" Grid.Column="2" Spacing="3">
+                    <Label x:Name="coctel15"  HorizontalOptions="Center" TextColor="White" FontSize="20" VerticalOptions="Start" HeightRequest="40"/>
+                    <Label x:Name="idcoctel15" HorizontalOptions="Center" TextColor="Gray" FontSize="18" VerticalOptions="Center" HeightRequest="40"/>
+                    <Image x:Name="imagen15" VerticalOptions="End"  WidthRequest="200" HeightRequest="400"/>
+                    <Entry x:Name="nombreReserva15" Placeholder="Ingrese el mismo nombre de su reserva" TextColor="White"/>
+                    <Button Text="Cotizar y Reservar" Clicked="cotizar_clicked15" BorderColor="DarkOliveGreen" TextColor="Black" BackgroundColor="LightGreen"/>
+                </StackLayout>
 
-            <Label x:Name="coctel15" Grid.Row="4" Grid.Column="2" Text="a"/>
-            <Label x:Name="idcoctel15" Grid.Row="4" Grid.Column="2" Text="a"/>
-            <Image x:Name="imagenl15" Grid.Row="4" Grid.Column="2"/>
+
+               
 
         </Grid>
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

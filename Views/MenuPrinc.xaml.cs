@@ -83,6 +83,11 @@ namespace AuroraApp_MAUI.Views
         {
             Shell.Current.GoToAsync(nameof(MenuCocteles));
         }
+
+        private void verCocteles_Clicked(object sender, EventArgs e)
+        {
+            Shell.Current.GoToAsync(nameof(misCoctelesViews));
+        }
     }
 
 }

@@ -1,0 +1,32 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:AuroraApp_MAUI.ViewModels"
+             x:Class="AuroraApp_MAUI.Views.misCoctelesViews"
+             Title="Tus Cocteles">
+
+    <CollectionView x:Name="coctelesCollection" ItemsSource="{Binding cotiList}" BackgroundColor="Black" >
+
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+        </CollectionView.ItemsLayout>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame BackgroundColor="Black" CornerRadius="5" Margin="5" BorderColor="#007ACC">
+                    <StackLayout>
+
+                        <Label Text="{Binding nombreReserva}" FontSize="20" TextColor="White"/>
+                        <Label Text="{Binding nombreCoctel}" FontSize="14" TextColor="White"/>
+
+                        <Button BackgroundColor="White"
+                            TextColor="Black"
+                            Text="Eliminar" Command="{Binding BindingContext.DeleteCommand, Source={x:Reference Name=coctelesCollection}}" 
+                            CommandParameter="{Binding .}" BorderColor="Red" />
+
+                    </StackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+
+    </CollectionView>
+</ContentPage>

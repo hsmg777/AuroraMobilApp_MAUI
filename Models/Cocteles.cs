@@ -9,7 +9,7 @@ namespace AuroraApp_MAUI.Models
 
     public class Rootcoctail
     {
-        public Cocteles[] Property1 { get; set; }
+        public List<Cocteles> Property1 { get; set; }
     }
 
     public class Cocteles

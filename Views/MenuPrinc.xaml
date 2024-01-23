@@ -61,7 +61,7 @@
                 </HorizontalStackLayout>
 
             <Button
-                Text="VER MENU COCTELES"
+                Text="MENU COCTELES"
                 BackgroundColor="WhiteSmoke"
                 TextColor="Black"
                 HeightRequest="50"
@@ -78,6 +78,17 @@
                 WidthRequest="150"
                 Clicked="verReservas_Clicked"
                 HorizontalOptions="Center"/>
+            
+            <Button Text="MIS COCTELES"
+                    x:Name="Vercocteles"
+                    BackgroundColor="WhiteSmoke"
+                    TextColor="Black"
+                    HeightRequest="50"
+                    WidthRequest="150"
+                    Clicked="verCocteles_Clicked"
+                    HorizontalOptions="Center"
+                    />
+            
             <Button
                 x:Name="Regresar"
                 Text="REGRESAR"

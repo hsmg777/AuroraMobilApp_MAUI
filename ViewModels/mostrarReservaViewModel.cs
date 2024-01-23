@@ -20,7 +20,7 @@ namespace AuroraApp_MAUI.ViewModels
 
         public mostrarReservaViewModel()
         {
-            LoadReservasAsync(); // Llama automáticamente al cargar el ViewModel
+            LoadReservasAsync(); 
         }
 
         public async Task LoadReservasAsync()
