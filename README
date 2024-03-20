@@ -1,6 +1,15 @@
 LEER:
 
-La aplicación móvil "Aurora", desarrollada con .NET MAUI y programada en C# utilizando el patrón de diseño Model-View-ViewModel (MVVM), está diseñada para optimizar la reserva y gestión de eventos en Quito. 
-Facilita a los usuarios la realización de reservas en tiempo real, administración de estas con flexibilidad, y personalización de su experiencia mediante servicios adicionales. 
-Su interfaz intuitiva y las actualizaciones en vivo de las fiestas mejoran la interacción del usuario, mientras que la integración con APIs asegura una eficaz sincronización de datos. 
-"Aurora" destaca por sus altos estándares de seguridad y privacidad, ofreciendo una solución completa y segura para disfrutar de la vida nocturna de la ciudad.
+La aplicación móvil "Aurora", creada con .NET MAUI y programada en C# siguiendo el patrón MVVM, mejora la experiencia de reserva y gestión de eventos en Quito.
+Permite a los usuarios hacer reservas en tiempo real, administrarlas con facilidad y personalizar su experiencia a través de servicios adicionales.
+La interfaz amigable y las actualizaciones en vivo sobre eventos potencian la interacción con el usuario. 
+"Aurora" se conecta a una base de datos local para la gestión eficiente de reservas y se integra con una API pública que utiliza SQLite para administrar la oferta de cocteles, 
+garantizando una sincronización de datos precisa. 
+La aplicación es reconocida por su seguridad y privacidad, proporcionando una plataforma completa y segura para disfrutar del ambiente nocturno de la ciudad.
+
+
+
+
+
+
+
